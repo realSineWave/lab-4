@@ -37,6 +37,9 @@ public final class GetAverageGradeUseCase {
             count += 1;
             sum += gradeDataBase.getGrade(course, indi).getGrade();
         }
+        if (count == 0) {
+            return 0;
+        }
         return sum / count;
     }
 }
